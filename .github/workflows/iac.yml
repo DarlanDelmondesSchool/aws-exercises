@@ -20,4 +20,4 @@ jobs:
         aws-region: sa-east-1
     - name: Executing CloudFormation IAM Stack Template
       run: |
-        aws cloudformation create-stack --stack-name myteststack-from-github --template-body file://iac/cloudformation/template-iam.yaml
+        aws cloudformation create-stack --stack-name myteststack-from-github --template-body file://iac/cloudformation/template-iam.yaml | aws cloudformation update-stack --stack-name myteststack-from-github --template-body file://iac/cloudformation/template-iam.yaml
