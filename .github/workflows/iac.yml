@@ -6,6 +6,10 @@ on:
 
 jobs:
   Provisioning:
+    - name: Checkout
+      uses: actions/checkout@v2.3.4
+      with:
+        repository: ${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
     - name: Configure aWS CLI
